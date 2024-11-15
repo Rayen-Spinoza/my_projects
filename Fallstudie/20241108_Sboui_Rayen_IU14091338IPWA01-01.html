@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO₂-Footprint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CO₂-Footprint</h1>
+        <img src="logo.png" alt="Logo">
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button onclick="toggleMenuDirection()">Toggle Menu Direction</button>
+    </header>
+    <main>
+        <section id="content">
+            <h2>Willkommen auf der CO₂-Footprint Webseite</h2>
+            <p>Hier finden Sie Informationen über die CO₂-Emissionen von Unternehmen und Ländern.</p>
+            <form id="inputForm" onsubmit="return validateForm()">
+                <label for="userInput">Geben Sie etwas ein:</label>
+                <input type="text" id="userInput" name="userInput" required>
+                <button type="submit">Absenden</button>
+            </form>
+            <table id="emissionsTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Land</th>
+                        <th onclick="sortTable(1)">Unternehmen</th>
+                        <th onclick="sortTable(2)">CO₂-Emissionen (Tonnen)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Unternehmen A</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>Unternehmen B</td>
+                        <td>7000</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>Unternehmen C</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Unternehmen D</td>
+                        <td>3000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>Unternehmen E</td>
+                        <td>8000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Non-Profit-Organisation. Alle Rechte vorbehalten. | <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutz</a></p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
